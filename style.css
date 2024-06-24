@@ -1,0 +1,48 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.container{
+    min-height: 40em;
+}
+.container2{
+    min-height: 20em;
+}
+.title{
+    text-align: center;
+    margin: 1em;
+}
+.counters{
+    padding: 3em 2em;
+    background: #00ff62;
+    color: #fff;
+    text-align: center;
+}
+.counters > div{
+    max-width: 900px;
+    min-height: 10px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.counter{
+    position: relative;
+
+}
+.counter h1{
+  font-size: 3em;
+  margin-bottom: .5em;
+
+}
+.counter:not(:last-child)::before{
+    content: '';
+    background: #fff;
+    position: absolute;
+    width: 2px;
+    height: 3em;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -1em;
+    
+}
